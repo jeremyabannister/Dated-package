@@ -78,3 +78,4 @@ extension Dated: Decodable where Value: Decodable { }
 extension Dated: Encodable where Value: Encodable { }
 extension Dated: Equatable where Value: Equatable { }
 extension Dated: Hashable where Value: Hashable { }
+extension Dated: Sendable where Value: Sendable { }

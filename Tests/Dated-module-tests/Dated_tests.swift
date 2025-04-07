@@ -1,16 +1,20 @@
-//
-//  Dated_tests.swift
-//  
-//
-//  Created by Jeremy Bannister on 4/26/23.
-//
-
-///
-import Dated_module
-import XCTest
-
-
-///
-final class Dated_tests: XCTestCase {
-    
+struct Dated_tests {
+    @Test
+    func conformances() {
+        func imagine(subject: Dated<some Encodable>) {
+            let _: any Encodable = subject
+        }
+        func imagine(subject: Dated<some Decodable>) {
+            let _: any Decodable = subject
+        }
+        func imagine(subject: Dated<some Equatable>) {
+            let _: any Equatable = subject
+        }
+        func imagine(subject: Dated<some Hashable>) {
+            let _: any Hashable = subject
+        }
+        func imagine(subject: Dated<some Sendable>) {
+            let _: any Sendable = subject
+        }
+    }
 }
